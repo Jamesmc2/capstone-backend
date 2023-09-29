@@ -1,0 +1,4 @@
+I made my users auth in the backend and its all done. 
+I made my events model and its in the schema.
+I need to add the data from my api to the events model.
+I need to create a model for users to favorite events.
