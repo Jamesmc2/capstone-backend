@@ -73,4 +73,5 @@ group :test do
 end
 
 gem "http"
+gem "rack-cors"
 
