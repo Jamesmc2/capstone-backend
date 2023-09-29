@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  get "/current_user" => "users#show"
   post "/users" => "users#create"
 
   post "/sessions" => "sessions#create"
