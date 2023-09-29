@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
 
   get "/events" => "events#index"
+
+  post "/favorites" => "favorites#create"
 end
