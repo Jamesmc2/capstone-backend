@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
     if current_user
       Favorite.create!(
         user_id: current_user.id,
-        event_id: params[:event_id],
+        event_id: params[:id],
       )
       render json: { message: "Event favorited" }
     end
