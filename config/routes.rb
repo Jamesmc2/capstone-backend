@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   get "/events" => "events#index"
 
+  get "/favorites" => "favorites#index"
   post "/favorites/:id" => "favorites#create"
 end

@@ -1,4 +1,9 @@
 class FavoritesController < ApplicationController
+  def index
+    @favorites = Favorite.all
+    render :index
+  end
+
   def create
     if current_user
       Favorite.create!(

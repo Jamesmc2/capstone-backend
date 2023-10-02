@@ -1,4 +1,6 @@
-I made my users auth in the backend and its all done. 
-I made my events model and its in the schema.
-I need to add the data from my api to the events model.
-I need to create a model for users to favorite events.
+MVP done
+I want to make favorite button dynamic so a user can unfavorite
+I want to view the times of events in cst
+I want a user to be able to view their favorited events
+
+Implement a calandar with the events
