@@ -13,4 +13,14 @@ class FavoritesController < ApplicationController
       render json: { message: "Event favorited" }
     end
   end
+
+  def destroy
+    favorite = Favorite.find_by(id: params[:id])
+    if favorite[:user_id] == current_user.id
+      favorite.destroy
+      render json: { message: "Favorite destroyed" }
+    else
+      render json: { error: "You may only delete your own favorites" }
+    end
+  end
 end

@@ -1,6 +1,4 @@
 MVP done
 I want to make favorite button dynamic so a user can unfavorite
 
-I want a user to be able to view their favorited events
-
 Implement a calandar with the events
