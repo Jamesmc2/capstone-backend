@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "/events" => "events#index"
-  get "/events/:id/stats" => "events#stats"
+  get "/events/:week" => "events#index"
+  get "/events/:id/results" => "events#results"
 
   get "/favorites" => "favorites#index"
   post "/favorites/:id" => "favorites#create"
