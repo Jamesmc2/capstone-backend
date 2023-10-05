@@ -1,7 +1,16 @@
+require_relative '../../.api_key.rb'
+
 class EventsController < ApplicationController
   def index
     @events = Event.all.sort
     render :index
+  end
+
+  def stats
+    event = Event.find_by(id: params[:id])
+    response = HTTP.get("https://api.sportradar.us/nfl/official/trial/v7/en/games/#{event["game_id"]}/boxscore.json?api_key=#{$api_key}")
+
+    render json: response.parse(:json)
   end
 
   # def test
