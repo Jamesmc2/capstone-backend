@@ -15,7 +15,6 @@ class EventsController < ApplicationController
 
   # def test
   #   count = 1
-  #   week_number = 0
   #   response = HTTP.get("https://api.sportradar.us/nfl/official/trial/v7/en/games/current_season/schedule.json?api_key=#{$api_key}")
 
   #   data = response.parse(:json)
@@ -24,7 +23,7 @@ class EventsController < ApplicationController
   #     week["games"].each do |game|
   #       event = Event.find_by(id: count)
   #       event.update(
-  #        week: week_number
+  #        status: game["status"]
   #       )
 
   #       event.save
