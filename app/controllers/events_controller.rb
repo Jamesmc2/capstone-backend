@@ -13,24 +13,24 @@ class EventsController < ApplicationController
     render json: response.parse(:json)
   end
 
-  # def test
-  #   count = 1
-  #   response = HTTP.get("https://api.sportradar.us/nfl/official/trial/v7/en/games/current_season/schedule.json?api_key=#{$api_key}")
+  def update
+    count = 1
+    response = HTTP.get("https://api.sportradar.us/nfl/official/trial/v7/en/games/current_season/schedule.json?api_key=#{$api_key}")
 
-  #   data = response.parse(:json)
-  #   data["weeks"].each do |week|
-  #     week_number = week["sequence"]
-  #     week["games"].each do |game|
-  #       event = Event.find_by(id: count)
-  #       event.update(
-  #        status: game["status"]
-  #       )
+    data = response.parse(:json)
+    data["weeks"].each do |week|
+     
+      week["games"].each do |game|
+        event = Event.find_by(id: count)
+        event.update(
+         status: game["status"]
+        )
 
-  #       event.save
+        event.save
 
-  #       count += 1
-  #     end
-  #   end
-  #   render json: { message: "Completed" }
-  # end
+        count += 1
+      end
+    end
+    render json: { message: "Completed" }
+  end
 end
